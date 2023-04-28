@@ -513,7 +513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &175631589
 Transform:
   m_ObjectHideFlags: 0
@@ -1981,7 +1981,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.05
+  near clip plane: 0.01
   far clip plane: 2000
   field of view: 60
   orthographic: 0
@@ -3174,7 +3174,7 @@ MonoBehaviour:
   mDataSetPath: Vuforia/Homw.xml
   AuthoringModelPath: f68403f89b0846b18c20ea342617cfc1_authoring.glb
   OcclusionModelPath: f68403f89b0846b18c20ea342617cfc1_occlusion.3dt
-  ClipHeight: 0.5900472
+  ClipHeight: 1.49166
   mSize: {x: 0, y: 0, z: 0}
   mBoundingBox:
     m_Center: {x: 0, y: 0, z: 0}
