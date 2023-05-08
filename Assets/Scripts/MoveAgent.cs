@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class MoveAgent : MonoBehaviour
 {
+    [SerializeField] TMP_Dropdown _dropdownList;
 
-    [SerializeField] Transform _endGoal;
+    [SerializeField] Transform _endGoal1;
+    [SerializeField] Transform _endGoal2;
+    [SerializeField] Transform _endGoal3;
+
+    Transform endGoal;
+
+
     [SerializeField] LineRenderer _line;
     [SerializeField] GameObject _pointPrefab;
 
@@ -20,6 +30,11 @@ public class MoveAgent : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.isStopped = true;
         navigation = false;
+        endGoal = _endGoal1;
+
+        _dropdownList.onValueChanged.AddListener(delegate {
+            DropdownValueChanged(_dropdownList);
+        });
     }
 
     // Update is called once per frame
@@ -39,9 +54,19 @@ public class MoveAgent : MonoBehaviour
                 Invoke("DrawPoints", 0.1f);
             }
         }*/
-
-        
     }
+    void DropdownValueChanged(TMP_Dropdown change)
+    {
+        if (change.value == 0)
+            endGoal = _endGoal1;
+        else if(change.value == 1)
+            endGoal = _endGoal2;
+        else
+            endGoal = _endGoal3;
+
+    }
+
+
     public void StartNavigation()
     {   
         if(navigation == false)
@@ -67,7 +92,7 @@ public class MoveAgent : MonoBehaviour
     {   
         while(navigation == true)
         {
-            agent.SetDestination(_endGoal.position);
+            agent.SetDestination(endGoal.position);
             yield return new WaitForEndOfFrame();
 
             DrawPoints();

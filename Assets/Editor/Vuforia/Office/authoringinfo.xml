@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_info.xsd">
     <TargetSet version="3.4">
-        <AreaTarget version="5.0" bbox="-2.2658 -0.9058 -3.6038 5.5396 2.0675 6.1360" targetId="f6a61b7efe7f435e8bf39769c5a74466" name="Office" pathAuthoring="f6a61b7efe7f435e8bf39769c5a74466_authoring.glb" pathOcclusion="f6a61b7efe7f435e8bf39769c5a74466_occlusion.3dt" pathNavMesh="f6a61b7efe7f435e8bf39769c5a74466_navmesh.glb" />
+        <AreaTarget version="5.0" bbox="-1.6013 -1.4719 -1.0588 11.2333 1.5376 6.5811" targetId="a8c56ba7a7904c1f9684e450c38a0560" name="office" pathAuthoring="a8c56ba7a7904c1f9684e450c38a0560_authoring.glb" pathOcclusion="a8c56ba7a7904c1f9684e450c38a0560_occlusion.3dt" pathNavMesh="a8c56ba7a7904c1f9684e450c38a0560_navmesh.glb" />
     </TargetSet>
 </QCARInfo>
